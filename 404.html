@@ -1,15 +1,320 @@
----
-layout: default
-title: 404
----
 
-<div class="bigStripe">
-	<h1 class="headline">404</h1>
-	<p class="catchphrase">Never gonna give you up</p>
-</div>
-<div class="rainbow">
-	<div class="rainbow-stripe blue">&nbsp;</div>
-	<div class="rainbow-stripe green">&nbsp;</div>
-	<div class="rainbow-stripe red">&nbsp;</div>
-	<div class="rainbow-stripe orange">&nbsp;</div>
-</div>
+<style>
+
+/*----------------------------------------------*/
+/* SOME FONTS */
+/*----------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Aclonica);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+/*----------------------------------------------*/
+/* SOME GLOBAL STYLES */
+/*----------------------------------------------*/
+body, html  { height: 100%}
+html, body, div, span, applet, object, iframe,
+blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	}
+body { line-height: 1}
+ol, ul { list-style: none}
+blockquote, q { quotes: none}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none}
+:focus { outline: 0}
+del { text-decoration: line-through}
+
+/*----------------------------------------------*/
+/* SOME GENERAL STYLES */
+/*----------------------------------------------*/
+html{-webkit-text-size-adjust: none;}
+body {
+  font-family: "Open Sans",Helvetica,Arial,Verdana,sans-serif;
+  font-smoothing: antialiased;
+  font-weight: normal;
+  background: #151618;
+  color: #FFF;
+  margin: 0;
+  text-align:center;
+  overflow: hidden; 
+}
+
+h1 {
+	  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 200px;
+  font-weight: 200;
+  margin:-30px 0 20px 0;
+}
+
+p {
+	margin:-20px 0 40px 0;
+  line-height: 1.6em;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+a {
+  transition: color 0.2s ease-out;
+  text-decoration: none;
+  color: #fff;
+  text-decoration:underline;
+}
+
+a:hover {
+  font-weight: 700;
+}
+
+h2 span{margin:0px;font-weight: 700;}
+
+/*----------------------------------------------*/
+/* SOME CONTENT STYLES */
+/*----------------------------------------------*/
+.logo {
+  margin: 10px;
+  width: 300px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  z-index:9999;
+}
+
+.button-white{
+  padding:15px 35px;
+  margin:30px 10px;
+  border:solid 1px #ffffff;
+  text-decoration:none;
+  display:inline-block;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*----------------------------------------------*/
+/* SOME STYLING FOR BACKGROUND */
+/*----------------------------------------------*/
+.mask {
+position:fixed;
+z-index:999;
+top:0;
+left:0;
+bottom:0;
+right:0;
+background-color: rgba(0,0,0,.9);
+}
+
+.image-grid {
+position:fixed;
+overflow:hidden;
+z-index:9;
+width:100%;
+height:100%;
+}
+
+.image-grid ul {
+display:block;
+width:100%;
+zoom:1;
+margin:0;
+padding:0;
+}
+
+.image-grid ul:before,.image-grid ul:after {
+content:'';
+display:table;
+}
+
+.image-grid ul:after {
+clear:both;
+}
+
+.image-grid ul li {
+-webkit-perspective:400px;
+-moz-perspective:400px;
+-o-perspective:400px;
+-ms-perspective:400px;
+perspective:400px;
+float:left;
+position:relative;
+display:block;
+overflow:hidden;
+background:#000;
+margin:0;
+padding:0;
+}
+
+.image-grid ul li a {
+display:block;
+outline:0;
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;
+-o-backface-visibility:hidden;
+-ms-backface-visibility:hidden;
+backface-visibility:hidden;
+-webkit-transform-style:preserve-3d;
+-moz-transform-style:preserve-3d;
+-o-transform-style:preserve-3d;
+-ms-transform-style:preserve-3d;
+transform-style:preserve-3d;
+-webkit-background-size:100% 100%;
+-moz-background-size:100% 100%;
+background-size:100% 100%;
+background-position:center center;
+background-repeat:no-repeat;
+background-color:#333;
+-webkit-box-sizing:content-box;
+-moz-box-sizing:content-box;
+box-sizing:content-box;
+}
+
+</style>
+
+		<div class="mask"></div>
+		<div id="image-grid" class="image-grid">
+		    <ul>
+		        <li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+				<li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+				<li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+				<li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work4.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work5.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work6.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work7.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work8.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work9.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work10.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work11.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="images/work/work12.jpg" alt=""/></a></li>
+		    </ul>
+		</div>
+	
+	<div class="container">
+	
+		<div class="brand-name">
+			<img class="logo" src="images/logo.png" alt="" />
+		</div>
+		
+		<div class="content">
+			<h2>4<span>O</span>4</h2>
+			<hr style="opacity:0.5">
+			<h1>NOT FOUND</h1>
+			<p>Sorry, but the page that you requested doesn't exist.</p>
+			<hr style="opacity:0.5">
+			<a href="index.html" class="button-white" title="">Continue to Our Home Page</a>
+		</div>
+		
+ <!-- SOME JS -->
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
